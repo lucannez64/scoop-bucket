@@ -9,10 +9,16 @@
             "hash": "78F29DBC7103494743230D486F9FACD4C844B98AB1089FEB980AE38D3B6C8C73"
         }
     },
-    "innosetup": true,
-    "bin": "Sigma file manager.exe",
+    "installer": {
+        "args": ["/S", "/D=$dir"]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": ["/S"]
+    },
+    "bin": "sigma-file-manager.exe",
     "shortcuts": [
-        ["Sigma file manager.exe", "Sigma file manager"]
+        ["sigma-file-manager.exe", "Sigma file manager"]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/aleksey-hoffman/sigma-file-manager/releases",
